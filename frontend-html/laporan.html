@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Laporan - Finance Tracker</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="shell">
+
+    <!-- TOP HEADER -->
+    <header class="app-header">
+      <span class="header-brand">💰 Finance Tracker</span>
+    </header>
+
+    <!-- KONTEN -->
+    <main class="page">
+
+      <h1>📊 Laporan Keuangan</h1>
+
+      <!-- STAT CARDS -->
+      <div class="stat-grid">
+        <div class="stat-card" style="border-left-color: #48bb78;">
+          <div class="stat-icon">📈</div>
+          <div>
+            <p class="stat-label">Total Pemasukan</p>
+            <p class="stat-value" id="stat-pemasukan" style="color:#48bb78">Memuat...</p>
+          </div>
+        </div>
+        <div class="stat-card" style="border-left-color: #f56565;">
+          <div class="stat-icon">📉</div>
+          <div>
+            <p class="stat-label">Total Pengeluaran</p>
+            <p class="stat-value" id="stat-pengeluaran" style="color:#f56565">Memuat...</p>
+          </div>
+        </div>
+        <div class="stat-card" style="border-left-color: #667eea;">
+          <div class="stat-icon">💳</div>
+          <div>
+            <p class="stat-label">Saldo Bersih</p>
+            <p class="stat-value" id="stat-saldo">Memuat...</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FILTER -->
+      <div class="card">
+        <div class="filter-row">
+          <button class="filter-btn active" data-filter="semua">Semua</button>
+          <button class="filter-btn" data-filter="pemasukan">Pemasukan</button>
+          <button class="filter-btn" data-filter="pengeluaran">Pengeluaran</button>
+        </div>
+      </div>
+
+      <!-- LIST TRANSAKSI -->
+      <div class="card">
+        <h3>📋 Riwayat Transaksi</h3>
+        <div id="transaksi-list">
+          <p class="empty-state">Memuat...</p>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- BOTTOM TAB BAR -->
+    <nav class="bottom-nav">
+      <a href="index.html" class="tab-item">
+        <span class="tab-icon">🏠</span>
+        <span class="tab-label">Dashboard</span>
+      </a>
+      <a href="laporan.html" class="tab-item active">
+        <span class="tab-icon">📊</span>
+        <span class="tab-label">Laporan</span>
+      </a>
+    </nav>
+
+    <!-- MODAL -->
+    <div class="modal-overlay hidden" id="modal-overlay">
+      <div class="modal-box">
+        <div class="modal-icon" id="modal-icon"></div>
+        <p class="modal-message" id="modal-message"></p>
+        <button class="modal-btn" id="modal-close">OK</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/laporan.js"></script>
+</body>
+</html>
