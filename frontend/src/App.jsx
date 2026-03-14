@@ -3,6 +3,7 @@ import "./styles.css";
 import Navbar from "./components/Navbar";
 import Dashboard from "./pages/Dashboard";
 import Laporan from "./pages/Laporan";
+import About from "./pages/About";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/laporan" element={<Laporan />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </div>
     </BrowserRouter>
